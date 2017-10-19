@@ -10,7 +10,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"45e520da79c7a924ffcad0c9e","lid":"4763981df3"}) })</script>
-</head>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type='text/javascript'>
+        var jumboHeight = $('.jumbotron').outerHeight();
+        function parallax(){
+            var scrolled = $(window).scrollTop();
+            $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+        }
+        $(window).scroll(function(e){
+            parallax();
+        });
+    </script>
+  </head>
   
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -104,14 +116,14 @@ The Sothbo team brings with them a wide range of unique skills allowing us to cr
 
 </body>
 <style>
-div.jumbotron {
+jumbotron {
  
   top:0;
   left:0;
   z-index: -100;
    width:100%;
    height: 1000px;
-  background-image: src("background1.png");
+  background-image: src('background1.png');
   background-size:cover;
   }
   div.jumbotron .jumb {
