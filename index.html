@@ -43,15 +43,9 @@
   </nav>
 
 </header>
-          <section>
+  <div class="bg"></div>
           <div class="jumbotron">
-  <div class="img" src="background1.png"></div>
-    <div class="container">
-      <div class="img" src="textonly.png"></div>
-            
-              </div>
-        </div>
-    </div>
+            <div class="jumbotron-container"></div>
 </div>
 
           <section>
@@ -105,6 +99,21 @@ The Sothbo team brings with them a wide range of unique skills allowing us to cr
 
 </body>
 <style>
+  .bg {
+    background: src('background1.png') no-repeat center center;
+   position: fixed;
+    width: 100%;
+    height: 1000px;
+    top:0;
+    left:0;
+    z-index:-1;
+  }
+  .jumbotron-container {
+    background: src('textonly.png') no-repeat center center;
+    position: fixed;
+    width: 100%;
+    height: 500px;
+    z-index:1;
 h6 {
     padding:30px;
     }
